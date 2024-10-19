@@ -1,0 +1,57 @@
+import { useState } from "react";
+
+const google=[{ name:"VIBISH V A", city:"INDIA", 
+  talent:"FRONT END DEVELOPER",
+   skills:["HTML","BOOTSRAP",
+     "JAVASCRIPT","REACTJS","PYTHON", "CSS",
+     "AWS CLOUD COMPUTING",],online:false,profile:"images/6.jpg"},
+     { name:"ELLESE PERRY", city:"AMERICA", 
+      talent:"BACK END DEVELOPER",
+       skills:["HTML","BOOTSTRAP","JAVASCRIPT",
+         "REACT JS","MONGO DB","NODE JS",
+         "CSS","ANGULAR JS"],online:true,profile:"images/8.jpeg"},
+         {name:"GLEN MAXWELL",
+          city:"AUSTRALIA", 
+          talent:"SOFTWARE DEVELOPER",
+           skills:["PYTHON","C PROGRAMMING","JAVA",
+             "MICROSOFT FUNDAMENTLS", "CSS","TESTING","HTML",
+             ],online:false,profile:"images/7.jpg"}]
+
+function Star(props){
+  const [link, setlink]= useState(<a href="https://www.linkedin.com/in/vibish-v-a-72427925a/"></a>);
+  const [colo,setcolo]= useState("NAME:" +"  ")
+  const [ ci,setci]= useState("PLACE : ")
+  return(
+  
+  <div className="profile">
+      
+    <span className={props.online? "add online":"add offline"}>{props.online? "ONLINE":"OFFLINE"}</span>
+  <img src={props.profile} alt="dani"/>
+  <h3>{colo}{props.name}</h3>
+  <h4>{ci}{props.city}</h4>
+  <h5>{props.talent}</h5>
+  <div className="btn">
+<a href="https://www.linkedin.com/in/vibish-v-a-72427925a/"><button className="primary">LINKED IN</button></a>
+    <button className="secondary">Following</button>
+  </div>
+<div className="skills">
+  <h6>SKILLS{link}</h6>
+  <ul>
+    {props.skills.map((skill,index)=>(
+      <li key={index}>{skill}</li>
+    ))}
+  </ul>
+</div>
+  </div>
+
+  )
+}
+
+export const App = () => {
+  return (
+<>{google.map((star,index)=>(
+  <Star key={index} name= {star.name} city={star.city}
+  talent={star.talent} skills={star.skills} online={star.online} profile={star.profile}/>
+))}</>
+   
+  );}
