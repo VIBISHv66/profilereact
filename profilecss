@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: "Inter" sans-serif;
+}
+#root{
+display: flex;
+border-color: blue;
+align-items: center;
+justify-content: center;
+gap: 20px;
+min-height: 100vh;
+margin: 0px;
+}
+h6{
+  
+  font: weight 100px px;
+  margin: 20px 0px;
+}
+.profile{
+background-color: rgb(95, 89, 89);
+padding-top: 40px;
+box-shadow: 0px 10px 20px -10px rgba(o,0,0,0.75);
+color:#fff;
+text-align: center;
+width: 300px;
+height: 520px;
+border-radius: 15px;
+position: obsolute;
+max-width: 100%;
+}
+
+.add{
+  background-color: brown;
+  padding: 5px 5px;
+  color: black;
+  border-radius: 4px;
+  font-size: 18px;
+  position: relative;
+  left:-30px;
+  
+  top:-120px
+}
+
+.online{
+background-color:rgb(0, 255, 170);
+}
+
+.offline{
+background-color: rgb(167, 25, 25);
+/* color: white; */
+}
+
+
+img{
+width: 150px;
+height: 150px;
+position: relative;
+border-radius: 50%;
+left: -38px;
+
+border: 5px solid #fff;
+}
+h3,h4,h5{
+  line-height: 3px;
+  font-size: 17px;
+}
+.btn{
+  display:flex;
+  justify-content: center;
+  gap: 10px;
+}
+.primary{
+  background-color:#0984e3;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 25px;
+  color: #fff;
+}
+.primary a{
+  text-decoration: none;
+}
+.primary:hover{
+  background-color: black;
+}
+.secondary{
+  background-color:transparent;
+
+  border: 1px solid lightskyblue;
+  border-radius: 5px;
+  padding: 10px 25px;
+  color: #fff;
+}
+.secondary:hover{
+  background-color: lightskyblue;
+}
+.skills{
+  text-align: left;
+  margin: 27px;
+  padding: 0px;
+  /* background-color: aquamarine; */
+  margin-top: 10px;
+  margin-top: 5px;
+}
+h6{
+  background-color:black;
+  padding: 6px;
+  width: fit-content;
+}
+.skills ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 2px;
+}
+.skills ul li{
+  display:inline-block;
+  border: 1px solid lightskyblue;
+  border-radius: 3px;
+  margin: 0px 5px 5px 0px;
+  padding: 7px;
+  font-size: 12px;
+  background-color: rgb(0, 255, 170);
+  color: black;
+}
